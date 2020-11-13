@@ -11,4 +11,25 @@ Just clone this repository into the Wuhu `plugins` directory.
 ## Usage
 
 Enable the plugin, then a "JSON Export" option should appear in the Wuhu admin
-sidebar.
+sidebar. The data is emitted in the format:
+
+```json
+[
+    {
+        "directory_name": string,
+        "display_name": string,
+        "entries": [
+            {
+                "title": string,
+                "author": string,
+                "comment": string,
+                "orgacomment": string,
+                "filename": string,
+                "playingorder": number
+            },
+            ...
+        ]
+    },
+    ...
+]
+```
