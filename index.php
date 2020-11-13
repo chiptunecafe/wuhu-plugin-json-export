@@ -7,7 +7,7 @@ $data = array();
 $compos = SQLLib::selectRows("select id,name,dirname from compos order by start");
 foreach ($compos as $compo) {
     $entries = SQLLib::selectRows(sprintf_esc(
-        "select title,author,comment,orgacomment,filename from compoentries where compoid = %d order by playingorder",
+        "select title,author,comment,orgacomment,filename,playingorder from compoentries where compoid = %d order by playingorder",
         $compo->id
     ));
 
